@@ -1,0 +1,46 @@
+<div class="customers-body">
+	<div class="subtitle"><h3>{{t "home.customer.subtitle"}}</h3></div>
+	{{#each model.customers as |c|}}
+		<div class="line"></div>
+		<div class="row ct-block">
+			{{#if c.id_odd}}
+				<div class="ct-pic ct-pic-left">
+					<img src="{{c.circle_logo}}" alt="{{c.name}}" />
+				</div>
+				<div class="ct-text ct-text-left">
+					<div class="ct-title">
+		 				<h4>{{c.name}}</h4>
+		 			</div>
+		 			<div class="ct-desc">
+		 				{{c.description}}
+		 			</div>
+
+		 			<!--
+		 			<div class="ct-link">
+		 				<p><em>&mdash;&mdash;&mdash; {{t "home.feature.desc"}}</em></p>
+		 			</div>
+		 			-->
+				</div>
+			{{else}}
+				<div class="ct-pic ct-pic-right">
+					<img src="{{c.circle_logo}}" alt="{{c.name}}" />
+				</div>
+				<div class="ct-text ct-text-right">
+					<div class="ct-title">
+		 				<h4>{{c.name}}</h4>
+		 			</div>
+		 			<div class="ct-desc">
+		 				<p>{{c.description}}</p>
+		 			</div>
+
+		 			<!--
+		 			<div class="ct-link">
+		 				<p><em>&mdash;&mdash;&mdash; {{t "home.feature.desc"}}</em></p>
+		 			</div>
+		 			-->
+				</div>
+			{{/if}}
+		</div>
+	{{/each}}
+</div>
+{{itl-footer}}

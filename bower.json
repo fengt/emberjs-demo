@@ -1,5 +1,6 @@
 {
   "name": "itiaoling",
   "dependencies": {
+    "fullpage.js": "^2.7.8"
   }
 }

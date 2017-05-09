@@ -1,0 +1,153 @@
+{{#full-page autoScrolling='true' navigation='true' 
+anchors='["firstPage", "secondPage", "thirdPage", "fourthPage", "fifthPage"]'
+sectionsColor='["#cc984e","#e87c50","#22b473","#cc984e","white"]'
+navigationTooltips='["首页", "解决方案", "产品中心", "客户案例", "关于跳羚"]'
+paddingTop='0' paddingBottom='0'
+loopBottom='true'
+slidesNavigation='false' }}
+<div class="section" id="home">
+	
+	
+    <div class="slide slide1">
+    </div>
+    <div class="slide slide2">
+    </div>
+    <div class="slide slide3">
+    </div>
+
+
+    <!--
+    <div class="banner-news">
+    	<b>NEWS: </b>
+    		<span class="banner-span swiper-container-vertical">
+    			<ol class="banner-ol">
+    				<li class="banner-li swiper-slide-duplicate" data-swiper-slide-index="0">
+    					<a href="news/shownews.php?lang=cn&amp;id=62" title="从微信、钉钉等APP，看六种常见的loading 加载设计">从微信、钉钉等APP，看六种常见的loading 加载设计</a>
+    				</li>
+
+			    	<li class="banner-li swiper-slide-prev" data-swiper-slide-index="1">
+			    		<a href="news/shownews.php?lang=cn&amp;id=55" title="工作总结：两个真实产品案例所引发的思考">工作总结：两个真实产品案例所引发的思考</a>
+			    	</li>
+    			</ol>
+    		</span>
+    		
+    		<p><a href="news/" title="news">more</a></p>
+    		
+    </div>
+    -->
+
+
+
+    <div class="watching">
+      <p>{{t "site.title"}}</p>
+    </div>
+
+    
+    <div class="banner-down"><i class="fa fa-angle-down"></i></div>
+</div>
+
+
+<div class="section" id="feature">
+  <div class="slide">
+    <div class="intro">
+      <h1>{{t "home.feature.title"}}</h1>
+      <p class="feature-desc">{{t "home.feature.desc"}}</p>
+      <img src="images/features/slider.png" alt="slider" class="img-responsive" />
+    </div>
+  </div>
+  <div class="slide">
+    <div class="intro">
+      <img src={{t "home.feature.slide1.logo"}} alt="write" class="img-responsive" />
+      <h1>{{t "home.feature.slide1.name"}}</h1>
+      <p class="desc">{{t "home.feature.slide1.desc"}}</p>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="intro">
+      <img src={{t "home.feature.slide2.logo"}} alt="write" class="img-responsive" />
+      <h1>{{t "home.feature.slide2.name"}}</h1>
+      <p class="desc">{{t "home.feature.slide2.desc"}}</p>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="intro">
+      <img src={{t "home.feature.slide3.logo"}} alt="write" class="img-responsive" />
+      <h1>{{t "home.feature.slide3.name"}}</h1>
+      <p class="desc">{{t "home.feature.slide3.desc"}}</p>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="intro">
+      <img src={{t "home.feature.slide4.logo"}} alt="write" class="img-responsive" />
+      <h1>{{t "home.feature.slide4.name"}}</h1>
+      <p class="desc">{{t "home.feature.slide4.desc"}}</p>
+    </div>
+  </div>
+  <div class="slide">
+    <div class="intro">
+      <img src={{t "home.feature.slide5.logo"}} alt="write" class="img-responsive" />
+      <h1>{{t "home.feature.slide5.name"}}</h1>
+      <p class="desc">{{t "home.feature.slide5.desc"}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="product">
+	{{itl-product}}
+</div>
+
+<div class="section" id="customer">
+  <div class="intro">
+    <h1>{{t "home.customer.title"}}</h1>
+    <p class="desc">{{t "home.customer.desc"}}</p>
+  </div>
+  <div class="row customers">
+    {{#each model.customers as |c|}}
+    <div class="col-md-4 col-xs-6">
+      {{#link-to 'customer'}}
+      	<img src="{{c.logo}}" style="{{c.style}}" class="img-responsive" />
+      {{/link-to}}
+      
+      <!--
+      <p class="desc">{{c.name}}</p>
+      <p class="desc">{{c.description}}</p>
+      -->
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+
+<div class="section" id="about">
+  
+  <div class="intro">
+    <h1>{{t "home.about1.title"}}</h1>
+    <!--
+    <img class="introduce" src={{t "home.about1.detail.pic"}}>
+    -->
+    <div class="row itl-introduce"> 
+	   <div class="col-md-6 col-md-offset-3">
+			<p class="desc">{{t "home.about1.desc"}}</p>
+	    </div>
+	</div>
+  </div>
+  
+
+  <div class="row font-about">
+  	<div class="col-sm-12 col-xs-12 col-md-3 col-md-offset-2 introduce-left">
+  		<p>{{t "home.about1.detail.desc1"}}</p>
+        <p>{{t "home.about1.detail.desc2"}}</p>
+  	</div>
+  	<div class="col-sm-12 col-xs-12 col-md-2">
+        <img class="introduce" src={{t "home.about1.detail.icon1"}}>
+    </div>
+    <div class="col-sm-12 col-xs-12 col-md-3 introduce-right">
+        <p>{{t "home.about1.detail.desc3"}}</p>
+        <p>{{t "home.about1.detail.desc4"}}</p>
+    </div>
+  </div>
+
+  {{itl-footer}}
+</div>
+
+{{/full-page}}
